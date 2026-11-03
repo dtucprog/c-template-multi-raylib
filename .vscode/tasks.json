@@ -10,6 +10,16 @@
                 "-o",
                 "${workspaceFolder}/bin/${fileBasenameNoExtension}"
             ],
+            "windows": {
+                "args": [
+                    "'@compile_flags.txt'", // `'` for Powershell
+                    "-lgdi32",
+                    "-lwinmm",
+                    "${file}",
+                    "-o",
+                    "${workspaceFolder}/bin/${fileBasenameNoExtension}"
+                ]
+            },
             "group": {
                 "kind": "build",
                 "isDefault": true

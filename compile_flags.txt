@@ -4,3 +4,6 @@
 -Wall
 -Wextra
 -lm
+-lraylib
+-L../raylib/lib
+-I../raylib/include
