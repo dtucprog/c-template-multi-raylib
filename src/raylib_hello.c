@@ -1,15 +1,16 @@
 #include "raylib.h"
-constexpr int SCREEN_WIDTH = 800, SCREEN_HEIGHT = 450, FONT_SIZE = 20, FPS = 60;
+constexpr int WINDOW_WIDTH = 800, WINDOW_HEIGHT = 450, FONT_SIZE = 20, FPS = 60;
+constexpr char WINDOW_TITLE[] = "Raylib Hello world!";
 
 int main() {
-  InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Raylib Hello world!");
+  InitWindow(WINDOW_WIDTH, WINDOW_HEIGHT, WINDOW_TITLE);
   SetTargetFPS(FPS);
 
   while (!WindowShouldClose()) {
     BeginDrawing();
 
     ClearBackground(RAYWHITE);
-    DrawText("Hello world!", SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, FONT_SIZE,
+    DrawText("Hello world!", WINDOW_WIDTH / 2, WINDOW_HEIGHT / 2, FONT_SIZE,
              LIGHTGRAY);
 
     EndDrawing();
