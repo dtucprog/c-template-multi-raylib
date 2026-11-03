@@ -1,9 +1,9 @@
 #include "raylib.h"
-constexpr int SCREEN_WIDTH = 800, SCREEN_HEIGHT = 450, FONT_SIZE = 20;
+constexpr int SCREEN_WIDTH = 800, SCREEN_HEIGHT = 450, FONT_SIZE = 20, FPS = 60;
 
 int main() {
   InitWindow(SCREEN_WIDTH, SCREEN_HEIGHT, "Raylib Hello world!");
-  SetTargetFPS(60);
+  SetTargetFPS(FPS);
 
   while (!WindowShouldClose()) {
     BeginDrawing();
